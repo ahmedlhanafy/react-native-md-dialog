@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/react-native-md-dialog.svg)](https://badge.fury.io/js/react-native-md-dialog)
 # React Native Material Design Dialog
 
 ## Description
