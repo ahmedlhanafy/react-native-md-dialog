@@ -7,6 +7,12 @@ Make beautiful material design dialogs for both Android and IOS with lots of con
 
 `$ npm install react-native-md-dialog --save`
 
+## Screenshots
+
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/one_button_android.png)  |  ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/one_button_ios.png)
+
 ## Simple Usage Example
 ```js
         import Dialog from 'react-native-md-dialog';

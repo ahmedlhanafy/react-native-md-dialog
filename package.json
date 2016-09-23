@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leecade/react-native-swiper.git"
+    "url": "https://github.com/ahmedlhanafy/react-native-md-dialog"
   },
   "author": "Ahmed Magdy",
   "bugs": {
-    "url": "https://github.com/leecade/react-native-swiper/issues"
+    "url": "https://github.com/ahmedlhanafy/react-native-md-dialog/issues"
   },
-  "homepage": "https://github.com/leecade/react-native-swiper#readme",
+  "homepage": "https://github.com/ahmedlhanafy/react-native-md-dialog#readme",
   "dependencies": {}
 }
