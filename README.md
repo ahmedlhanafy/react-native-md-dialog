@@ -37,7 +37,7 @@ Android             |  IOS
 
         ...
 
-        <View>
+        <View styles={{ flex: 1}}>
             <TouchableOpacity onPress={() => this.refs.dialog.open()}>
                 <Text>Open Dialog</Text>
             </TouchableOpacity>
@@ -59,7 +59,7 @@ Android             |  IOS
 
         ...
 
-        <View>
+        <View styles={{ flex: 1}}>
             <TouchableOpacity onPress={() => this.refs.dialog.open()}>
                 <Text>Open Dialog</Text>
             </TouchableOpacity>
