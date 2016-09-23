@@ -19,6 +19,9 @@ Android             |  IOS
 import Dialog, { 
     DialogButton 
 } from 'react-native-md-dialog';
+
+...
+
 <Dialog actions={[<DialogButton text='CLOSE' onPress={() => this.refs.dialog.close()} position='right'/>]} ref='dialog'>
     <View style={styles.dialogConatiner}>
         <Text >
@@ -38,6 +41,9 @@ Android             |  IOS
 import Dialog, { 
     DialogButton 
 } from 'react-native-md-dialog';
+
+...
+
 <Dialog 
     actions={[
         <DialogButton text='INCREMENT' onPress={() => this.setState({ numberOfClicks: this.state.numberOfClicks + 1})}/>,
@@ -63,6 +69,9 @@ Android             |  IOS
 import Dialog, { 
     DialogButton 
 } from 'react-native-md-dialog';
+
+...
+
 <Dialog 
     backgroundColor='#3f51b5' 
     titleColor='#d81b60'
@@ -88,6 +97,9 @@ Android             |  IOS
 import Dialog, { 
     DialogButton 
 } from 'react-native-md-dialog';
+
+...
+
 <Dialog 
     actions={[
         <DialogButton text='DONE' onPress={() => this.refs.dialog.close()} />
