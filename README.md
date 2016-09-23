@@ -141,3 +141,10 @@ import Dialog, {
 |**color**|Text color of the button |`PropTypes.string`|`#009688`|
 |**position**|Determines where to put the button |`PropTypes.string`|`right`|
 |**key**|Key that react uses internally for performance reasons |`PropTypes.string`|*None*|
+
+## Dialog's methods
+| Name | Description | 
+|---|---|
+|`open()`|Opens the dialog |
+|`close()`|Closes the dialog |
+
