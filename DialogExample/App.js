@@ -44,7 +44,7 @@ export default class App extends Component {
     }
     renderDialogWithCloseBtn() {
         return (
-            <Dialog actions={[<DialogButton text='CLOSE' onPress={() => this.refs.dialog1.close()} position='right'/>]} ref='dialog1'>
+            <Dialog actions={[<DialogButton key="3" text='CLOSE' onPress={() => this.refs.dialog1.close()} position='right'/>]} ref='dialog1'>
                 <View style={styles.dialogConatiner}>
                     <Text >
                         I'm a dialog with a close button
@@ -57,9 +57,9 @@ export default class App extends Component {
         return (
             <Dialog 
                 actions={[
-                    <DialogButton text='INCREMENT' onPress={() => this.setState({ numberOfClicks: this.state.numberOfClicks + 1})}/>,
-                    <DialogButton text='OK' onPress={() => this.refs.dialog2.close()}/>,
-                    <DialogButton text='DISABLED' disabled={true} position='left' />
+                    <DialogButton key="4" text='INCREMENT' onPress={() => this.setState({ numberOfClicks: this.state.numberOfClicks + 1})}/>,
+                    <DialogButton key="5" text='OK' onPress={() => this.refs.dialog2.close()}/>,
+                    <DialogButton key="6" text='DISABLED' disabled={true} position='left' />
                 ]} 
                 ref='dialog2'>
                 <View style={styles.dialogConatiner}>
@@ -77,8 +77,8 @@ export default class App extends Component {
                 backgroundColor='#3f51b5' 
                 titleColor='#d81b60'
                 actions={[
-                    <DialogButton text='DISABLED' disabled={true} position='left' color='#ffeb3b' />,            
-                    <DialogButton text='OK' onPress={() => this.refs.dialog3.close()} color='#d81b60'/>
+                    <DialogButton key="7" text='DISABLED' disabled={true} position='left' color='#ffeb3b' />,            
+                    <DialogButton  key="8" text='OK' onPress={() => this.refs.dialog3.close()} color='#d81b60'/>
                 ]} 
                 ref='dialog3'>
                 <View style={styles.dialogConatiner}>
@@ -92,7 +92,7 @@ export default class App extends Component {
                     
             <Dialog 
                 actions={[
-                    <DialogButton text='DONE' onPress={() => this.refs.dialog4.close()} />
+                    <DialogButton key="9" text='DONE' onPress={() => this.refs.dialog4.close()} />
                 ]} 
                 ref='dialog4'
                 width={240}>
@@ -106,7 +106,7 @@ export default class App extends Component {
         return (
             <Dialog 
                 actions={[
-                    <DialogButton text='DONE' onPress={() => this.refs.dialog5.close()} />
+                    <DialogButton key="10" text='DONE' onPress={() => this.refs.dialog5.close()} />
                 ]} 
                 ref='dialog5'
                 maxHeight={280}>

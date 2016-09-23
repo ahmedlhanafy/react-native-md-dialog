@@ -74,7 +74,6 @@ export default class Dialog extends Component {
             leftActions = actions.filter(({ props }) => props.position === 'left');
             rightActions = actions.filter(({ props }) => props.position !== 'left');
         }
-
         return (
             this.state.visible && <Animated.View style={[styles.wrapper, { opacity: this.animatedVal }]}>
                 <TouchableWithoutFeedback onPress={() => dismissable && this.close() }>
@@ -103,7 +102,7 @@ const Touchable = (props, state) => (
     isAndroid ? <TouchableNativeFeedback {...props} {...state}/> : <TouchableOpacity {...props} {...state}/>
 )
 
-export const DialogButton = ({ text, onPress, color, disabled, key }) => (
+export const DialogButton = ({ text, onPress, color, disabled }) => (
     <Touchable disabled={disabled} onPress={() => onPress() }>
         <View style={styles.dialogBtnContainer}>
             <Text type='medium' style={[styles.dialogBtn, { color: color? color: disabled? '#bdbdbd':'#009688' }]}>{text}</Text>
@@ -116,7 +115,6 @@ DialogButton.propTypes = {
     onPress: PropTypes.func,
     color: PropTypes.string,
     disabled: PropTypes.bool,
-    key: PropTypes.string,
     position: PropTypes.string,
 }
 DialogButton.defaultProps = {
