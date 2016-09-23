@@ -32,7 +32,7 @@ Android             |  IOS
 
 
 ## Simple Usage Example
-```js
+```jsx
         import Dialog from 'react-native-md-dialog';
 
         ...
@@ -52,7 +52,7 @@ Android             |  IOS
 ```
 
 ## Example with buttons
-```js
+```jsx
         import Dialog, {
             DialogButton
         } from 'react-native-md-dialog';
