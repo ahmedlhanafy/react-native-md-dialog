@@ -16,16 +16,16 @@ Android             |  IOS
 
 #### Code
 ```jsx
-            import Dialog, { 
-                DialogButton 
-            } from 'react-native-md-dialog';
-            <Dialog actions={[<DialogButton text='CLOSE' onPress={() => this.refs.dialog.close()} position='right'/>]} ref='dialog'>
-                <View style={styles.dialogConatiner}>
-                    <Text >
-                        I'm a dialog with a close button
-                    </Text>
-                </View>
-            </Dialog>
+import Dialog, { 
+    DialogButton 
+} from 'react-native-md-dialog';
+<Dialog actions={[<DialogButton text='CLOSE' onPress={() => this.refs.dialog.close()} position='right'/>]} ref='dialog'>
+    <View style={styles.dialogConatiner}>
+        <Text >
+            I'm a dialog with a close button
+        </Text>
+    </View>
+</Dialog>
 ```
 
 ### Multiple Buttons Dialog
@@ -35,22 +35,22 @@ Android             |  IOS
 
 #### Code
 ```jsx
-            import Dialog, { 
-                DialogButton 
-            } from 'react-native-md-dialog';
-            <Dialog 
-                actions={[
-                    <DialogButton text='INCREMENT' onPress={() => this.setState({ numberOfClicks: this.state.numberOfClicks + 1})}/>,
-                    <DialogButton text='OK' onPress={() => this.refs.dialog.close()}/>,
-                    <DialogButton text='DISABLED' disabled={true} position='left' />
-                ]} 
-                ref='dialog'>
-                <View style={styles.dialogConatiner}>
-                    <Text >
-                        I'm a dialog with multiple btns, {this.state.numberOfClicks}
-                    </Text>
-                 </View>
-            </Dialog>
+import Dialog, { 
+    DialogButton 
+} from 'react-native-md-dialog';
+<Dialog 
+    actions={[
+        <DialogButton text='INCREMENT' onPress={() => this.setState({ numberOfClicks: this.state.numberOfClicks + 1})}/>,
+        <DialogButton text='OK' onPress={() => this.refs.dialog.close()}/>,
+        <DialogButton text='DISABLED' disabled={true} position='left' />
+    ]} 
+    ref='dialog'>
+    <View style={styles.dialogConatiner}>
+        <Text >
+            I'm a dialog with multiple btns, {this.state.numberOfClicks}
+        </Text>
+        </View>
+</Dialog>
 ```
 
 ### Styles Dialog
@@ -60,21 +60,21 @@ Android             |  IOS
 
 #### Code 
 ```jsx 
-            import Dialog, { 
-                DialogButton 
-            } from 'react-native-md-dialog';
-            <Dialog 
-                backgroundColor='#3f51b5' 
-                titleColor='#d81b60'
-                actions={[
-                    <DialogButton text='DISABLED' disabled={true} position='left' color='#ffeb3b' />,            
-                    <DialogButton text='OK' onPress={() => this.refs.dialog.close()} color='#d81b60'/>
-                ]} 
-                ref='dialog'>
-                <View style={styles.dialogConatiner}>
-                    <Text>Dialogs with custom styles</Text>
-                </View>
-            </Dialog>
+import Dialog, { 
+    DialogButton 
+} from 'react-native-md-dialog';
+<Dialog 
+    backgroundColor='#3f51b5' 
+    titleColor='#d81b60'
+    actions={[
+        <DialogButton text='DISABLED' disabled={true} position='left' color='#ffeb3b' />,            
+        <DialogButton text='OK' onPress={() => this.refs.dialog.close()} color='#d81b60'/>
+    ]} 
+    ref='dialog'>
+    <View style={styles.dialogConatiner}>
+        <Text>Dialogs with custom styles</Text>
+    </View>
+</Dialog>
 ```
 
 
@@ -85,23 +85,23 @@ Android             |  IOS
 
 #### Code
 ```jsx
-            import Dialog, { 
-                DialogButton 
-            } from 'react-native-md-dialog';
-            <Dialog 
-                actions={[
-                    <DialogButton text='DONE' onPress={() => this.refs.dialog.close()} />
-                ]} 
-                ref='dialog'
-                maxHeight={280}>
-                <ScrollView>
-                    <View style={styles.dialogConatiner}>
-                        <Text style={{ color: 'rgba(0,0,0,0.8)', fontSize: 16 }}>
-                            ...
-                        </Text>
-                    </View>
-                </ScrollView>
-            </Dialog>
+import Dialog, { 
+    DialogButton 
+} from 'react-native-md-dialog';
+<Dialog 
+    actions={[
+        <DialogButton text='DONE' onPress={() => this.refs.dialog.close()} />
+    ]} 
+    ref='dialog'
+    maxHeight={280}>
+    <ScrollView>
+        <View style={styles.dialogConatiner}>
+            <Text style={{ color: 'rgba(0,0,0,0.8)', fontSize: 16 }}>
+                ...
+            </Text>
+        </View>
+    </ScrollView>
+</Dialog>
 ```
 
 ## `<Dialog/>` props
