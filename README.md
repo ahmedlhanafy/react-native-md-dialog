@@ -7,6 +7,12 @@ Make beautiful material design dialogs for both Android and IOS with lots of con
 
 `$ npm install react-native-md-dialog --save`
 
+## Try with Exponent
+
+[![Exponent Button][2]][1]
+  [1]: https://getexponent.com/@ahmedlhanafy/MaterialDesignDialogExample
+  [2]: https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/run_with_exp.png 
+
 ## Screenshots
 
 ### One Button Dialog

@@ -6,7 +6,7 @@
     "ios",
     "android"
   ],
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Make beautiful material design dialogs for both Android and IOS with lots of configurations to suit your need",
   "main": "Dialog.js",
   "scripts": {
