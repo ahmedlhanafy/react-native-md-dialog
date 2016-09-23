@@ -14,73 +14,95 @@ Android             |  IOS
 :------------------:|:-------------------------:
 ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/one_button_android.png)  |  ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/one_button_ios.png)
 
-### Multiple Button Dialog
+#### Code
+```jsx
+            import Dialog, { 
+                DialogButton 
+            } from 'react-native-md-dialog';
+            <Dialog actions={[<DialogButton text='CLOSE' onPress={() => this.refs.dialog.close()} position='right'/>]} ref='dialog'>
+                <View style={styles.dialogConatiner}>
+                    <Text >
+                        I'm a dialog with a close button
+                    </Text>
+                </View>
+            </Dialog>
+```
+
+### Multiple Buttons Dialog
 Android             |  IOS
 :------------------:|:-------------------------:
 ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/multiple_buttons_android.png)  |  ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/multiple_buttons_ios.png)
+
+#### Code
+```jsx
+            import Dialog, { 
+                DialogButton 
+            } from 'react-native-md-dialog';
+            <Dialog 
+                actions={[
+                    <DialogButton text='INCREMENT' onPress={() => this.setState({ numberOfClicks: this.state.numberOfClicks + 1})}/>,
+                    <DialogButton text='OK' onPress={() => this.refs.dialog.close()}/>,
+                    <DialogButton text='DISABLED' disabled={true} position='left' />
+                ]} 
+                ref='dialog'>
+                <View style={styles.dialogConatiner}>
+                    <Text >
+                        I'm a dialog with multiple btns, {this.state.numberOfClicks}
+                    </Text>
+                 </View>
+            </Dialog>
+```
 
 ### Styles Dialog
 Android             |  IOS
 :------------------:|:-------------------------:
 ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/styled_dialog_android.png)  |  ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/styled_dialog_ios.png)
 
+#### Code 
+```jsx 
+            import Dialog, { 
+                DialogButton 
+            } from 'react-native-md-dialog';
+            <Dialog 
+                backgroundColor='#3f51b5' 
+                titleColor='#d81b60'
+                actions={[
+                    <DialogButton text='DISABLED' disabled={true} position='left' color='#ffeb3b' />,            
+                    <DialogButton text='OK' onPress={() => this.refs.dialog.close()} color='#d81b60'/>
+                ]} 
+                ref='dialog'>
+                <View style={styles.dialogConatiner}>
+                    <Text>Dialogs with custom styles</Text>
+                </View>
+            </Dialog>
+```
+
+
 ### Scrollable Content Dialog
 Android             |  IOS
 :------------------:|:-------------------------:
 ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/scrollable_content_android.png)  |  ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/scrollable_content_ios.png)
 
-
-
-## Simple Usage Example
+#### Code
 ```jsx
-        import Dialog from 'react-native-md-dialog';
-
-        ...
-
-        <View styles={{ flex: 1 }}>
-            <TouchableOpacity onPress={() => this.refs.dialog.open()}>
-                <Text>Open Dialog</Text>
-            </TouchableOpacity>
-            <Dialog ref="dialog">
-                <View>
-                    <Text>
-                        I'm a simple dialog :)
-                    </Text>
-                </View>
-            </Dialog>
-        </View>
-```
-
-## Example with buttons
-```jsx
-        import Dialog, {
-            DialogButton
-        } from 'react-native-md-dialog';
-
-        ...
-
-        <View styles={{ flex: 1 }}>
-            <TouchableOpacity onPress={() => this.refs.dialog.open()}>
-                <Text>Open Dialog</Text>
-            </TouchableOpacity>
+            import Dialog, { 
+                DialogButton 
+            } from 'react-native-md-dialog';
             <Dialog 
                 actions={[
-                    <DialogButton text='INCREMENT' onPress={() => this.setState({ numberOfClicks: this.state.numberOfClicks + 1})}/>,
-                    <DialogButton text='OK' onPress={() => this.refs.dialog2.close()}/>,
-                    <DialogButton text='DISABLED' disabled={true} position='left' />
+                    <DialogButton text='DONE' onPress={() => this.refs.dialog.close()} />
                 ]} 
-                ref="dialog">
-                <View>
-                    <Text>
-                        I'm a dialog with buttons ;)
-                    </Text>
-                </View>
+                ref='dialog'
+                maxHeight={280}>
+                <ScrollView>
+                    <View style={styles.dialogConatiner}>
+                        <Text style={{ color: 'rgba(0,0,0,0.8)', fontSize: 16 }}>
+                            ...
+                        </Text>
+                    </View>
+                </ScrollView>
             </Dialog>
-        </View>
 ```
-
-## More Examples
-Refer to the demo app to see more usages
 
 ## `<Dialog/>` props
 

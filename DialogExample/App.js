@@ -20,7 +20,7 @@ import {
 
 import Dialog, {
     DialogButton
-} from './Dialog';
+} from 'react-native-md-dialog';
 
 const isAndroid = Platform.OS === 'android';
 
@@ -55,8 +55,6 @@ export default class App extends Component {
     }
     renderDialogWithMultipleBtns() {
         return (
-            
-            
             <Dialog 
                 actions={[
                     <DialogButton text='INCREMENT' onPress={() => this.setState({ numberOfClicks: this.state.numberOfClicks + 1})}/>,
