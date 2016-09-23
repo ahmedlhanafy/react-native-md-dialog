@@ -9,9 +9,27 @@ Make beautiful material design dialogs for both Android and IOS with lots of con
 
 ## Screenshots
 
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
+### One Button Dialog
+Android             |  IOS
+:------------------:|:-------------------------:
 ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/one_button_android.png)  |  ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/one_button_ios.png)
+
+### Multiple Button Dialog
+Android             |  IOS
+:------------------:|:-------------------------:
+![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/multiple_buttons_android.png)  |  ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/multiple_buttons_ios.png)
+
+### Styles Dialog
+Android             |  IOS
+:------------------:|:-------------------------:
+![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/styled_dialog_android.png)  |  ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/styled_dialog_ios.png)
+
+### Scrollable Content Dialog
+Android             |  IOS
+:------------------:|:-------------------------:
+![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/scrollable_content_android.png)  |  ![](https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/scrollable_content_ios.png)
+
+
 
 ## Simple Usage Example
 ```js
