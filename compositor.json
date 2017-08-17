@@ -1,0 +1,90 @@
+{
+  "name": "ahmedlhanafy/react-native-md-dialog",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "React Native MD Dialog",
+  "branch": "",
+  "style": {
+    "name": "Material",
+    "componentSet": {
+      "nav": "nav/DarkAbsoluteNav",
+      "header": "header/GradientHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Roboto, sans-serif",
+    "heading": {
+      "fontWeight": 500,
+      "letterSpacing": "-0.01em"
+    },
+    "colors": {
+      "text": "#212121",
+      "background": "#fff",
+      "primary": "#2196f3",
+      "secondary": "#1565c0",
+      "highlight": "#ff4081",
+      "border": "#e0e0e0",
+      "muted": "#f5f5f5"
+    },
+    "layout": {
+      "centered": true,
+      "bannerHeight": "80vh",
+      "maxWidth": 896
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/ahmedlhanafy/react-native-md-dialog",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/react-native-md-dialog",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "react-native-md-dialog",
+      "subhead": "Make beautiful material design dialogs for both Android and IOS",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "react-native-md-dialog: Make beautiful material design dialogs for both Android and IOS",
+          "url": ""
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "ahmedlhanafy",
+          "repo": "react-native-md-dialog"
+        }
+      ],
+      "text": "v0.1.7"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<p><a href=\"https://badge.fury.io/js/react-native-md-dialog\"><img src=\"https://badge.fury.io/js/react-native-md-dialog.svg\"></a></p>\n<h1>React Native Material Design Dialog</h1>\n<h2>Description</h2>\n<p>Make beautiful material design dialogs for both Android and IOS with lots of configurations to suit your need</p>\n<h2>Installation</h2>\n<p><code>$ npm install react-native-md-dialog --save</code></p>\n<h2>Try with Exponent</h2>\n<p><a href=\"https://getexponent.com/@ahmedlhanafy/MaterialDesignDialogExample\"><img src=\"https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/run_with_exp.png\"></a></p>\n<h2>Screenshots</h2>\n<h3>One Button Dialog</h3>\n<table>\n<thead>\n<tr>\n<th>Android</th>\n<th>IOS</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><img src=\"https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/one_button_android.png\"></td>\n<td><img src=\"https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/one_button_ios.png\"></td>\n</tr>\n</tbody>\n</table>\n<h4>Code</h4>\n<pre><span class=\"hljs-keyword\">import</span> Dialog, { \n    DialogButton \n} <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react-native-md-dialog&apos;</span>;\n\n...\n\n&lt;Dialog actions={[<span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">DialogButton</span> <span class=\"hljs-attr\">text</span>=<span class=\"hljs-string\">&apos;CLOSE&apos;</span> <span class=\"hljs-attr\">onPress</span>=<span class=\"hljs-string\">{()</span> =&gt;</span> this.refs.dialog.close()} position=&apos;right&apos;/&gt;]} ref=&apos;dialog&apos;&gt;\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">View</span> <span class=\"hljs-attr\">style</span>=<span class=\"hljs-string\">{styles.dialogConatiner}</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Text</span> &gt;</span>\n            I&apos;m a dialog with a close button\n        <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">Text</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">View</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">Dialog</span>&gt;</span></span></pre><h3>Multiple Buttons Dialog</h3>\n<table>\n<thead>\n<tr>\n<th>Android</th>\n<th>IOS</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><img src=\"https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/multiple_buttons_android.png\"></td>\n<td><img src=\"https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/multiple_buttons_ios.png\"></td>\n</tr>\n</tbody>\n</table>\n<h4>Code</h4>\n<pre><span class=\"hljs-keyword\">import</span> Dialog, { \n    DialogButton \n} <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react-native-md-dialog&apos;</span>;\n\n...\n\n&lt;Dialog \n    actions={[\n        &lt;DialogButton text=&apos;INCREMENT&apos; onPress={() =&gt; this.setState({ numberOfClicks: this.state.numberOfClicks + 1})}/&gt;,\n        &lt;DialogButton text=&apos;OK&apos; onPress={() =&gt; this.refs.dialog.close()}/&gt;,\n        &lt;DialogButton text=&apos;DISABLED&apos; disabled={true} position=&apos;left&apos; /&gt;\n    ]} \n    ref=&apos;dialog&apos;&gt;\n    &lt;View style={styles.dialogConatiner}&gt;\n        &lt;Text &gt;\n            I&apos;m a dialog with multiple btns, {this.state.numberOfClicks}\n        &lt;/Text&gt;\n        &lt;/View&gt;\n&lt;/Dialog&gt;</pre><h3>Styles Dialog</h3>\n<table>\n<thead>\n<tr>\n<th>Android</th>\n<th>IOS</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><img src=\"https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/styled_dialog_android.png\"></td>\n<td><img src=\"https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/styled_dialog_ios.png\"></td>\n</tr>\n</tbody>\n</table>\n<h4>Code</h4>\n<pre><span class=\"hljs-keyword\">import</span> Dialog, { \n    DialogButton \n} <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react-native-md-dialog&apos;</span>;\n\n...\n\n&lt;Dialog \n    backgroundColor=<span class=\"hljs-string\">&apos;#3f51b5&apos;</span> \n    titleColor=<span class=\"hljs-string\">&apos;#d81b60&apos;</span>\n    actions={[\n        <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">DialogButton</span> <span class=\"hljs-attr\">text</span>=<span class=\"hljs-string\">&apos;DISABLED&apos;</span> <span class=\"hljs-attr\">disabled</span>=<span class=\"hljs-string\">{true}</span> <span class=\"hljs-attr\">position</span>=<span class=\"hljs-string\">&apos;left&apos;</span> <span class=\"hljs-attr\">color</span>=<span class=\"hljs-string\">&apos;#ffeb3b&apos;</span> /&gt;</span>,            \n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">DialogButton</span> <span class=\"hljs-attr\">text</span>=<span class=\"hljs-string\">&apos;OK&apos;</span> <span class=\"hljs-attr\">onPress</span>=<span class=\"hljs-string\">{()</span> =&gt;</span> this.refs.dialog.close()} color=&apos;#d81b60&apos;/&gt;\n    ]} \n    ref=&apos;dialog&apos;&gt;\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">View</span> <span class=\"hljs-attr\">style</span>=<span class=\"hljs-string\">{styles.dialogConatiner}</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Text</span>&gt;</span>Dialogs with custom styles<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">Text</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">View</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">Dialog</span>&gt;</span></span></pre><h3>Scrollable Content Dialog</h3>\n<table>\n<thead>\n<tr>\n<th>Android</th>\n<th>IOS</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><img src=\"https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/scrollable_content_android.png\"></td>\n<td><img src=\"https://raw.githubusercontent.com/ahmedlhanafy/react-native-md-dialog/master/imgs/scrollable_content_ios.png\"></td>\n</tr>\n</tbody>\n</table>\n<h4>Code</h4>\n<pre><span class=\"hljs-keyword\">import</span> Dialog, { \n    DialogButton \n} <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;react-native-md-dialog&apos;</span>;\n\n...\n\n&lt;Dialog \n    actions={[\n        <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">DialogButton</span> <span class=\"hljs-attr\">text</span>=<span class=\"hljs-string\">&apos;DONE&apos;</span> <span class=\"hljs-attr\">onPress</span>=<span class=\"hljs-string\">{()</span> =&gt;</span> this.refs.dialog.close()} /&gt;\n    ]} \n    ref=&apos;dialog&apos;\n    maxHeight={280}&gt;\n    <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">ScrollView</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">View</span> <span class=\"hljs-attr\">style</span>=<span class=\"hljs-string\">{styles.dialogConatiner}</span>&gt;</span>\n            <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Text</span> <span class=\"hljs-attr\">style</span>=<span class=\"hljs-string\">{{</span> <span class=\"hljs-attr\">color:</span> &apos;<span class=\"hljs-attr\">rgba</span>(<span class=\"hljs-attr\">0</span>,<span class=\"hljs-attr\">0</span>,<span class=\"hljs-attr\">0</span>,<span class=\"hljs-attr\">0.8</span>)&apos;, <span class=\"hljs-attr\">fontSize:</span> <span class=\"hljs-attr\">16</span> }}&gt;</span>\n                ...\n            <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">Text</span>&gt;</span>\n        <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">View</span>&gt;</span>\n    <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">ScrollView</span>&gt;</span>\n<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">Dialog</span>&gt;</span></span></pre><h2><code>&lt;Dialog/&gt;</code> props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop</th>\n<th>Description</th>\n<th>Type</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>actions</strong></td>\n<td>Array of <code>&lt;DialogButton/&gt;</code> components</td>\n<td><code>PropTypes.array</code></td>\n<td><em>None</em></td>\n</tr>\n<tr>\n<td><strong>style</strong></td>\n<td>React Native style object</td>\n<td>`PropTypes.object</td>\n<td></td>\n<td>PropTypes.array`</td>\n<td><em>None</em></td>\n</tr>\n<tr>\n<td><strong>title</strong></td>\n<td>Dialog&apos;s tilte.</td>\n<td><code>PropTypes.string</code></td>\n<td><code>Dialog</code></td>\n</tr>\n<tr>\n<td><strong>titleColor</strong></td>\n<td>Color of dialog&apos;s tilte.</td>\n<td><code>PropTypes.string</code></td>\n<td><code>rgba(0,0,0,0.8)</code></td>\n</tr>\n<tr>\n<td><strong>backgroundColor</strong></td>\n<td>Dialog&apos;s background color.</td>\n<td><code>PropTypes.string</code></td>\n<td><code>white</code></td>\n</tr>\n<tr>\n<td><strong>dismissable</strong></td>\n<td>Determines if clicking outside the dialog closes the dialog or not.</td>\n<td><code>PropTypes.bool</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td><strong>animationDuration</strong></td>\n<td>Duration of closing and opening the dialog.</td>\n<td><code>PropTypes.number</code></td>\n<td><code>200</code></td>\n</tr>\n<tr>\n<td><strong>width</strong></td>\n<td>Dialog&apos;s width.</td>\n<td><code>PropTypes.number</code></td>\n<td><code>deviceWidth - 48</code></td>\n</tr>\n<tr>\n<td><strong>maxHeight</strong></td>\n<td>Dialog&apos;s max height.</td>\n<td><code>PropTypes.number</code></td>\n<td><code>420</code></td>\n</tr>\n</tbody>\n</table>\n<h2><code>&lt;DialogButton/&gt;</code> props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop</th>\n<th>Description</th>\n<th>Type</th>\n<th>Default</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>text</strong></td>\n<td>Button&apos;s text</td>\n<td><code>PropTypes.string</code></td>\n<td><em>None</em></td>\n</tr>\n<tr>\n<td><strong>disabled</strong></td>\n<td>Determines whether the button is enabled or not</td>\n<td><code>PropTypes.bool</code></td>\n<td><code>false</code></td>\n</tr>\n<tr>\n<td><strong>onPress</strong></td>\n<td>Determines the action when button is pressed</td>\n<td><code>PropTypes.func</code></td>\n<td><em>None</em></td>\n</tr>\n<tr>\n<td><strong>color</strong></td>\n<td>Text color of the button</td>\n<td><code>PropTypes.string</code></td>\n<td><code>#009688</code></td>\n</tr>\n<tr>\n<td><strong>position</strong></td>\n<td>Determines where to put the button</td>\n<td><code>PropTypes.string</code></td>\n<td><code>right</code></td>\n</tr>\n</tbody>\n</table>\n<h2>Dialog&apos;s methods</h2>\n<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>open()</code></td>\n<td>Opens the dialog</td>\n</tr>\n<tr>\n<td><code>close()</code></td>\n<td>Closes the dialog</td>\n</tr>\n</tbody>\n</table>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/ahmedlhanafy/react-native-md-dialog",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/ahmedlhanafy",
+          "text": "ahmedlhanafy"
+        }
+      ]
+    }
+  ]
+}
