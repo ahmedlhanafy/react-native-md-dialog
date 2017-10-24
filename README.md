@@ -1,4 +1,7 @@
 [![npm version](https://badge.fury.io/js/react-native-md-dialog.svg)](https://badge.fury.io/js/react-native-md-dialog)
+
+# This library is deprecated, you can use the dialog component in https://github.com/callstack/react-native-paper instead. 
+
 # React Native Material Design Dialog
 
 ## Description
